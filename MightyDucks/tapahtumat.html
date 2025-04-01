@@ -4,13 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="tapahtumat.css">
-    <title>Tapahtumat</title>
+    <title>Events</title>
   </head>
   <body>
     <header>
-        <h2>Tapahtumat</h2>
+        <h2>Ryhmäytymispäivä</h2>
     </header>
-    <p>Tervetuloa tapahtumien sivulle!</p>
     <main>
         
         <div class="form-group"></div>
@@ -19,8 +18,16 @@
                 <option value="" disabled selected>Choose an event</option>
                 <option value="LaserTag">Laser Tag</option>
                 <option value="BoardGames">Board Games</option>
-                <option value="OutdoorActivities">Outdoor Activities</option>
-                <option value="SomethingElse">Something Else, What?</option>
+                <option value="Outdoor Activities">Outdoor Activities</option>
+                
+              </select>
+              <br/>
+              <br/>
+              
+                <label for="something-else-input">Something else, what?</label>
+                <button type="submit" id="submit-button">Submit</button>
+                <input type="text" id="something-else-input" name="something-else-input" />
+              </div>
             </select>
         </div>
         
@@ -29,6 +36,6 @@
     <footer>
       <p>&copy; 2025 Mighty Ducks</p>
     </footer>
-    <script src="index.js"></script>
+    <script src="tapahtumat.js"></script>
   </body>
 </html>

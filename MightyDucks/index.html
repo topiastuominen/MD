@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mighty Ducks - Tapahtuman Hallinta</title>
+    <title>Mighty Ducks - Event Management</title>
     <link rel="stylesheet" href="layout.css" />
   </head>
   <body>
     <header>
-      <h1>Ryhmäytymispäivä</h1>
+      <h1>Team Building Day</h1>
     </header>
 
     <div class="container">
       <div class="column">
-        <h2>Henkilötiedot</h2>
+        <h2>Personal Information</h2>
 
         <div class="form-group">
           <label for="name">Name:</label>
@@ -30,67 +30,60 @@
         <input type="email" id="email" name="email" />
       </div>
       <div class="form-group">
-        <label for="participation">Osallistuminen:</label>
+        <label for="participation">Participation:</label>
         <select id="participation" name="participation">
-          <option value="yes">Kyllä</option>
-          <option value="no">Ei</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="dietary">Erityisruokavaliot tai allergiat:</label>
-        <textarea
-          id="dietary"
-          name="dietary"
-          rows="3"
-          placeholder="Kirjoita mahdolliset erityisruokavaliot tai allergiat"
-        ></textarea>
+        <label for="dietary">Dietary restrictions or allergies:</label>
+        <textarea id="dietary" name="dietary" rows="3"></textarea>
       </div>
       <div class="form-group">
-        <label for="special-needs">Mahdolliset erityistarpeet:</label>
+        <label for="special-needs">Any special needs:</label>
         <textarea id="special-needs" name="special-needs" rows="3"></textarea>
       </div>
       <div class="form-group">
         <label for="group-activity"
-          >Miten haluaisit osallistua ryhmäytymistehtäviin?</label
+          >How would you like to participate in team-building activities?</label
         >
         <select id="group-activity" name="group-activity">
-          <option value="" disabled selected>Valitse vaihtoehto</option>
-          <option value="meet_new_people">
-            Tavoitteena tutustua uusiin ihmisiin
-          </option>
-          <option value="teamwork">Tiimityöskentelyyn osallistuminen</option>
+          <option value="" disabled selected>Select an option</option>
+          <option value="meet_new_people">Aiming to meet new people</option>
+          <option value="teamwork">Participating in teamwork</option>
           <option value="specific_activity">
-            Haluan johonkin erityiseen aktiviteettiin
+            I want to join a specific activity
           </option>
         </select>
       </div>
       <div class="form-group">
-        <label for="strengths"
-          >Mikä on omaa kiinnostustasi / vahvuuksiasi?</label
-        >
+        <label for="strengths">What are your interests/strengths?</label>
         <select id="strengths" name="strengths">
-          <option value="" disabled selected>Valitse vaihtoehto</option>
-          <option value="leadership">Johtajuus</option>
-          <option value="creative_thinking">Luova ajattelu</option>
+          <option value="" disabled selected>Select an option</option>
+          <option value="leadership">Leadership</option>
+          <option value="creative_thinking">Creative Thinking</option>
           <option value="communication_skills">
-            Keskustelutaitojen kehittäminen
+            Improving communication skills
           </option>
-          <option value="outdoor_activities">Ulkotunteinen</option>
+          <option value="outdoor_activities">Outdoor activities</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label for="assistance">Haluatko auttaa järjestelyissä?</label>
+        <label for="assistance"
+          >Would you like to help with arrangements?</label
+        >
         <textarea id="assistance" name="assistance" rows="3"></textarea>
       </div>
       <div class="column">
         <div class="form-group">
           <label>
             <input type="checkbox" id="terms" name="terms" />
-            Hyväksyn ilmoittautumiseni ehdot ja osallistumisehdot.
+            I accept the terms and conditions of registration and participation.
           </label>
         </div>
-        <a href="tapahtumat.html" class="button">Siirry Tapahtumat-sivulle</a>
+        <a href="events.html" class="button">Go to Events Page</a>
       </div>
     </div>
     <script src="index.js"></script>
