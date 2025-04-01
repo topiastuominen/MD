@@ -20,17 +20,5 @@
                 
                 
                
-                  document.getElementById('submit-button').addEventListener('click', function(event) {
-                  event.preventDefault(); // Prevent form submission
-                  const selectedEvent = document.getElementById('goal-en').value;
-                  const somethingElse = document.getElementById('something-else-input').value;
-
-                  const answers = {
-                    selectedEvent: selectedEvent,
-                    somethingElse: somethingElse
-                  };
-
-                  localStorage.setItem('eventAnswers', JSON.stringify(answers));
-                  alert('Your answers have been saved!');
-                  });
+                 
                 
