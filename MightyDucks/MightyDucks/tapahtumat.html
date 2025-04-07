@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tapahtumat.css">
+    <title>Events</title>
+  </head>
+  <body>
+    <header>
+        <h2>Ryhmäytymispäivä</h2>
+    </header>
+    <main>
+        
+        <div class="form-group"></div>
+            <label for="goal-en">Choose your preferred event:</label>
+            <select id="goal-en" name="goal-en">
+                <option value="" disabled selected>Choose an event</option>
+                <option value="LaserTag">Laser Tag</option>
+                <option value="BoardGames">Board Games</option>
+                <option value="Outdoor Activities">Outdoor Activities</option>
+                
+              </select>
+              <br/>
+              <br/>
+
+              <label for="something-else-input">Something else, what?</label>
+              <input type="text" id="something-else-input" name="something-else-input" />
+              <br/>
+              <div class="column">
+                <div class="form-group">
+                  <label>
+                    I accept the terms and conditions of registration and participation.
+                  </label>
+                  <input
+                    type="checkbox"
+                    id="terms"
+                    name="terms"
+                    title="Accept terms and conditions"
+                  />
+                </div>
+                <button type="submit" id="submit-button" onclick="goToHomepage()">Submit</button>
+              <script>
+                function goToHomepage() {
+                  window.location.href = "index.html"; // Replace "index.html" with the actual homepage file path
+                }
+              </script>
+            </select>
+        </div>
+        
+      
+    </main>
+    <footer>
+      <p>&copy; 2025 Mighty Ducks</p>
+    </footer>
+    <script src="tapahtumat.js"></script>
+  </body>
+</html>
