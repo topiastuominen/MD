@@ -37,18 +37,14 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="dietary">Dietary restrictions or allergies:</label>
-        <textarea id="dietary" name="dietary" rows="1"></textarea>
-      </div>
-
-      <div class="form-group">
         <label for="group-activity"
           >How would you like to participate in team-building activities?</label
         >
         <select id="group-activity" name="group-activity">
           <option value="" disabled selected>Select an option</option>
-          <option value="meet_new_people">Aiming to meet new people</option>
+          <option value="meet_new_people">Networking</option>
           <option value="teamwork">Participating in teamwork</option>
+          <option value="organizing">Organizing</option>
           <option value="specific_activity">
             I want to join a specific activity
           </option>
@@ -71,7 +67,10 @@
         <label for="assistance"
           >Would you like to help with arrangements?</label
         >
-        <textarea id="assistance" name="assistance" rows="1"></textarea>
+        <select id="participation" name="participation">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
       </div>
 
       <div class="form-group">
