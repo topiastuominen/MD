@@ -1,47 +1,46 @@
-/* tapahtumat.css */
-
-body {
-  background-color: lightSkyBlue;
-  color: #333; /* Dark gray for good contrast */
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding-left: 20px;
-}
 header {
-  padding: 10px 20px;
   text-align: center;
+  background-color: rgb(107, 0, 62);
+  color: bisque;
+  font-family: "Morion regular", sans-serif;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(107, 0, 62);
+  padding-left: 20px;
+  color: bisque;
 }
 
-h1,
-h2,
-h3 {
-  color: #222; /* Slightly darker for headings */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 25%;
+  box-sizing: border-box;
+  color: black;
 }
 
-a {
-  color: #0056b3; /* Blue for links */
-  text-decoration: none;
+.form-group {
+  margin-bottom: 15px;
 }
 
-a:hover {
-  text-decoration: underline;
+/* Styling for the boxes */
+.box-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Slightly transparent white background */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-p {
-  margin-bottom: 1em;
+.box {
+  background-color: rgb(107, 0, 62);
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
