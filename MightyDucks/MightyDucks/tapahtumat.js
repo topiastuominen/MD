@@ -10,7 +10,7 @@
                     };
 
                     localStorage.setItem('eventAnswers', JSON.stringify(answers));
-                    alert('Your answers have been saved!');
+                    alert('Kiitos ilmoittautumisesta!');
 
                     // Clear the input fields
                     somethingElseInput.value = '';
