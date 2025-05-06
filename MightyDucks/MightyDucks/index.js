@@ -4,14 +4,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const myButton = document.getElementById('myButton');
     if (myButton) {
         myButton.addEventListener('click', () => {
-            const dataToSave = {
-                name: document.getElementById('nameInput')?.value || '',
-                email: document.getElementById('emailInput')?.value || '',
-            };
+            const nameInput = document.getElementById('nameInput');
+            const emailInput = document.getElementById('emailInput');
 
-            // Save data to localStorage
-            localStorage.setItem('filledSheetData', JSON.stringify(dataToSave));
-            alert('Data saved!');
+            if (nameInput && emailInput) {
+                const dataToSave = {
+                    name: nameInput.value || '',
+                    email: emailInput.value || '',
+                };
+
+                // Save data to localStorage
+                localStorage.setItem('filledSheetData', JSON.stringify(dataToSave));
+                alert('Data saved!');
+            } else {
+                alert('Required input fields are missing!');
+            }
         });
+    } else {
+        console.warn('Button with ID "myButton" not found in the DOM.');
     }
 });
