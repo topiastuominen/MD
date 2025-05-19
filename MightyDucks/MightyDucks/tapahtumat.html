@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Link to the server.js file -->
-<script src="server.js"></script>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -43,22 +43,29 @@
                   />
                 </div>
                 <button type="submit" id="submit-button" onclick="goToHomepage()">Submit</button>
-              <script>
-                function goToHomepage() {
-                  window.location.href = "index.html"; // Replace "index.html" with the actual homepage file path
-                }
-              </script>
+              
             </select>
         </div>
         
       
     </main>
     <div class="form-group">
-      <button onclick="window.location.href='index.html';" class="button">
-        Previous
-      </button>
+      <!-- The "Previous" button is no longer needed for submit navigation.
+        Instead, move the redirect logic to the submit button. -->
+      <button type="button" id="previous-button" onclick="goToHomepage()">Previous</button>
+      <script>
+        function goToHomepage() {
+          window.location.href = 'index.html';
+        }
+      </script>
     </div>
     <footer>
+      <div class="kuvat">
+        <img src="images/board-games.png" alt="board-games" height="200"/>
+        <img src="images/Apple-logo.png" alt="Apple-logo" height="200"/>
+        <img src="images/ring-toss-game.png" alt="ring-toss-game" height="200"/>
+        <img src="images/Dart.png" alt="Dart.png" height="200"/>
+      </div>
       <p>&copy; 2025 Mighty Ducks</p>
     </footer>
     <script src="tapahtumat.js"></script>
