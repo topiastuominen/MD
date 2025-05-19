@@ -2,8 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <img src="image.png" alt="Description of image" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mighty Ducks - Event Management</title>
     <link rel="stylesheet" href="layout.css" />
   </head>
@@ -22,6 +21,7 @@
             <input type="text" id="name" name="name" />
           </div>
         </div>
+
         <div class="form-group">
           <label for="phone">Phone: </label>
           <input type="tel" id="phone" name="phone" />
@@ -31,6 +31,7 @@
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" />
         </div>
+
         <div class="form-group">
           <label for="participation">Participation:</label>
           <select id="participation" name="participation">
@@ -38,10 +39,11 @@
             <option value="no">No</option>
           </select>
         </div>
+
         <div class="form-group">
-          <label for="group-activity"
-            >How would you like to participate in team-building activities?</label
-          >
+          <label for="group-activity">
+            How would you like to participate in team-building activities?
+          </label>
           <select id="group-activity" name="group-activity">
             <option value="" disabled selected>Select an option</option>
             <option value="meet_new_people">Networking</option>
@@ -52,6 +54,7 @@
             </option>
           </select>
         </div>
+
         <div class="form-group">
           <label for="strengths">What are your interests/strengths?</label>
           <select id="strengths" name="strengths">
@@ -74,18 +77,60 @@
             <option value="no">No</option>
           </select>
         </div>
+
         <div class="form-group">
-         <button type="button" onclick="window.location.href='tapahtumat.html'">Next</button>
-          </button>
+          <button type="submit">Submit</button>
         </div>
+
         <div id="responseMsg"></div>
       </form>
-    
-    
-   
+    </div>
+
+    <script>
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", async function (e) {
+          e.preventDefault();
+
+          const data = {
+            name: document.getElementById("name").value.trim(),
+            phone: document.getElementById("phone").value.trim(),
+            email: document.getElementById("email").value.trim(),
+            participation: document.getElementById("participation").value,
+            groupActivity: document.getElementById("group-activity").value,
+            strengths: document.getElementById("strengths").value,
+            assistance: document.getElementById("assistance").value,
+          };
+
+          // Simple validation example
+          if (!data.name || !data.email) {
+            alert("Please fill out your name and email.");
+            return;
+          }
+
+          try {
+            const response = await fetch("http://localhost:3000/submit", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+              document.getElementById("responseMsg").textContent =
+                "✅ Your information has been saved!";
+              setTimeout(() => {
+                window.location.href = "tapahtumat.html";
+              }, 1500);
+            } else {
+              document.getElementById("responseMsg").textContent =
+                "❌ Error saving your info.";
+            }
+          } catch (error) {
+            console.error(error);
+            document.getElementById("responseMsg").textContent =
+              "❌ Could not connect to server.";
+          }
+        });
+    </script>
   </body>
 </html>
-<!-- 
-Quick backend	Node.js + Express
-Database 	MongoDB (MongoDB Atlas)
--->
